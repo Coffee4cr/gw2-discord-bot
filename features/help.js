@@ -19,14 +19,14 @@ function messageReceived(message) {
 				console.log('Not Registered');
 				return;
 			}
-			message.reply("Welcome to the help section" +"\n"+
-			              "--=====       **Setup**        ====--" +"\n"+
+			message.reply("**Welcome to the help section**" +"\n"+
+			              " ``` Setup ``` " +"\n"+
 			              phrases.get("LINK")+"\n"+
-			              "--===== **Character Commands** ====--" +"\n"+
+			              " ``` Character Commands ```" +"\n"+
 			              phrases.get("WVW_RANK")+"\n"+
 			              phrases.get("FRACTAL_LEVEL")+"\n"+
 			              phrases.get("BUILDS")+"\n"+
-			              "--=====    **WvW Commands**    ====--" +"\n"+
+			              " ``` WvW Commands ``` " +"\n"+
 			              phrases.get("WVW_SCORE")+"\n"+
 			              phrases.get("REL_SCORE")+"\n"+
 			              phrases.get("KILL_DEATH")+"\n");
