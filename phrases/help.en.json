@@ -1,0 +1,9 @@
+{
+	"LINK": "Please direct message me \"link\" to add a Guild Wars 2 API key so you can use my features",
+	"WVW_RANK": "`!wvw rank`  -  Get your WvW Rank",
+	"FRACTAL_LEVEL": "`!fractal level`  -  Get your Fractal Level",
+	"BUILDS": "`!build [Character Name] [PVE|WVW|PVP]`  -  Show your build Traits (ie. !build Rytlock Brimstone pvp)",
+	"WVW_SCORE": "`!score`  -  The overall score of each world and their PPT.",
+	"REL_SCORE": "`!relscore`  -  Only the overall score of the top server is given, the second and third place scores are given as the difference to the world above.",
+	"KILL_DEATH": "`!kd`  -  The kill/death ratio for each world"
+}
