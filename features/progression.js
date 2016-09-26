@@ -6,10 +6,6 @@ var
 ;
 
 function messageReceived(message) {
-	if (message.content.match(new RegExp('^!'+phrases.get("CORE_HELP")+'$', 'i'))) {
-		message.author.sendMessage(phrases.get("PROGRESSION_HELP"));
-		return;
-	}
 	var fractal_cmd = phrases.get("PROGRESSION_FRACTAL");
 	var wvw_cmd = phrases.get("PROGRESSION_WVW");
 	if (! message.content.match(new RegExp('^!('+fractal_cmd+'|'+wvw_cmd+')$', 'i'))) return;
@@ -27,7 +23,10 @@ function messageReceived(message) {
 			if (err) {
 				if (err.message === "endpoint requires authentication") message.reply(phrases.get("CORE_NO_KEY"));
 				if (err.message === "requires scope progression") message.reply(phrases.get("CORE_MISSING_SCOPE", { scope: 'progression' }));
-				else console.log(err.message);
+				else {
+					message.reply(phrases.get("CORE_ERROR"));
+					console.log(err.message);
+				}
 				return;
 			}
 			if (! result) {

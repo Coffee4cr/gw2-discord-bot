@@ -27,4 +27,4 @@ token = "MTc1Mjg4NjIyMjQ3OTY4NzY4.CsWKuA.-TP3N4AUAbX37PB4SyLi7vJGBzE" # Token fo
 
 [features]
 language = "en"
-enabled = ["ranks", "motd", "wvw_score", "progression", "builds"]
+enabled = ["ranks", "motd", "wvw_score", "progression", "builds", "session"]
