@@ -1,0 +1,30 @@
+# Copy this file to local.toml to make changes for a version that git will ignore.
+[redis]
+host = "127.0.0.1"
+port = "6379"
+path = "" # path to unix socket, use this over host/port if you can.
+password = ""
+db = "0" # database number
+
+[world]
+id = 1006 # world member has to be on to get in role, and default world for wvw stuffs.
+role = "" # Name of the role, leave blank if you don't want this
+
+[guild]
+id  = "662FD74F-ACD9-43B5-9D7A-C5152653F7EA" # Guild unique ID in format XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX, this can be found at https://api.guildwars2.com/v2/guild/search?name=[guild name]
+key = "B1BABC42-B962-5540-8938-864749924B58F585236A-F6FB-4897-98B8-B01306719A91" # API Key from top guild rank with the "guilds" permission
+member_role = "New Members" # Name of the role guild members go in
+motd_channel = "general" # Will set the channel description to the guild motd
+motd_convert_urls = true # Convert urls in the guild motd to actual urls that discord parses to a link, if they don't start with e.g. "http://"
+motd_excluded_subdomains = [ # An array of url subdomains of which the url should not be converted (these are regular expressions)
+  "[^\\.]*ts[^\\.]*", # *ts*.example.com
+  "[^\\.]*teamspeak[^\\.]*" # *teamspeak*.example.com
+]
+
+[discord]
+clientid = "70845115005939712" # Used to generate a link to add the bot to a server
+token = "MTc1Mjg4NjIyMjQ3OTY4NzY4.CsWKuA.-TP3N4AUAbX37PB4SyLi7vJGBzE" # Token for your discord bot user
+
+[features]
+language = "en"
+enabled = ["ranks", "motd", "wvw_score", "progression", "builds"]
