@@ -1,7 +1,6 @@
 # Project files
 config/local*
 phrases/local.js*
-node_modules
 redis-stable
 
 ########################################################################
