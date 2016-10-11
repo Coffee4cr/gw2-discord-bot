@@ -28,6 +28,18 @@ bot.on("disconnected", function() {
 });
 
 bot.on("message", function(message) {
+	var now = new Date();
+    var dd = now.getDate();
+    var mm = now.getMonth()+1; //January is 0!
+    var yyyy = now.getFullYear();
+    var hh = now.getHours();
+    var mi = now.getMinutes();
+    var ss = now.getSeconds();
+    
+    var nowDateTime = yyyy+'-'+mm+'-'+dd+' '+hh+':'+mi+':'+ss;
+    
+    console.log(nowDateTime);
+    
 	if (message.content.match(new RegExp('^!'+phrases.get("CORE_HELP")+'$', 'i'))) {
 		var help = features.map(f => phrases.get(f.toUpperCase()+"_HELP")).filter(f => !!f).join("\n\n").trim();
 		message.author.sendMessage("```Commands```\n"+help);
